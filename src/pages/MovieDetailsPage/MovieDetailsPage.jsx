@@ -15,7 +15,6 @@ const MovieDetailsPage = () => {
 
   return (
     <div>
-      <p>MovieDetailsPage #{params.movieId}</p>
       <img src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`} />
       <h1>{movie.title}</h1>
       <p>{movie.overview}</p>

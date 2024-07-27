@@ -7,7 +7,7 @@ import MovieList from "../../components/MovieList/MovieList";
 const MoviesPage = () => {
   const [movies, setMovies] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
-  const query = searchParams.get("query") || "";
+  const query = searchParams.get("query") ?? "";
 
   useEffect(() => {
     if (query) {
@@ -24,6 +24,9 @@ const MoviesPage = () => {
   }, [query]);
 
   const handleSearch = (searchQuery) => {
+    if (!searchQuery) {
+      setSearchParams({});
+    }
     setSearchParams({ query: searchQuery });
   };
 
