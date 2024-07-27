@@ -23,3 +23,6 @@ export const fetchMovieCast = (movieId) =>
 
 export const fetchMovieReviews = (movieId) =>
   fetchMovies(`/movie/${movieId}/reviews`);
+
+export const fetchMoviesByQuery = (query) =>
+  fetchMovies("/search/movie", { query });
