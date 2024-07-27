@@ -1,0 +1,27 @@
+.movieCast {
+    margin-top: 20px;
+}
+
+.castList {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.castItem {
+    flex: 1 1 200px;
+    text-align: center;
+}
+
+.castImage {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.castName,
+.castCharacter {
+    margin: 5px 0;
+}
