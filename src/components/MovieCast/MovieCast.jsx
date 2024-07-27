@@ -8,10 +8,6 @@ const MovieCast = () => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // useEffect(() => {
-  //   fetchMovieCast(params.movieId).then((data) => setCast(data));
-  // }, [params.movieId]);
-
   useEffect(() => {
     const getCast = async () => {
       try {

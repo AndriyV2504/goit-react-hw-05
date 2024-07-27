@@ -20,3 +20,6 @@ export const fetchMovieDetails = (movieId) => fetchMovies(`/movie/${movieId}`);
 
 export const fetchMovieCast = (movieId) =>
   fetchMovies(`/movie/${movieId}/credits`);
+
+export const fetchMovieReviews = (movieId) =>
+  fetchMovies(`/movie/${movieId}/reviews`);
