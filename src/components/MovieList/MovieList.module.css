@@ -1,14 +1,30 @@
+.movieListContainer {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
 .movieList {
     list-style-type: none;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
 }
 
 .movieItem {
     flex: 1 1 200px;
+    max-width: 200px;
     text-align: center;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.movieItem:hover {
+    transform: scale(1.05);
 }
 
 .movieLink {
@@ -16,6 +32,14 @@
     color: inherit;
 }
 
+.movieImage {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #dee2e6;
+}
+
 .movieTitle {
-    margin: 5px 0;
+    margin: 10px 0;
+    font-size: 18px;
+    color: #343a40;
 }
