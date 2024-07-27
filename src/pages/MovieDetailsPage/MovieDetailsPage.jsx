@@ -4,6 +4,7 @@ import {
   NavLink,
   Outlet,
   useLocation,
+  useNavigate,
   useParams,
 } from "react-router-dom";
 import { fetchMovieDetails } from "../../services/api";
@@ -13,9 +14,16 @@ const MovieDetailsPage = () => {
   const params = useParams();
   console.log(params);
   const [movie, setMovies] = useState(null);
+  const navigate = useNavigate(null);
 
   const location = useLocation();
   const goBackRef = useRef(location?.state || "/movies");
+
+  useEffect(() => {
+    setTimeout(() => {
+      navigate("/");
+    }, 6000);
+  }, [navigate]);
 
   useEffect(() => {
     fetchMovieDetails(params.movieId).then((data) => setMovies(data));
