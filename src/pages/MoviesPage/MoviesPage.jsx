@@ -32,7 +32,6 @@ const MoviesPage = () => {
 
   return (
     <div>
-      <h1>Search Movies</h1>
       <SearchBar onSearch={handleSearch} />
       <MovieList movies={movies} />
     </div>
