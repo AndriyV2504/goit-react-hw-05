@@ -17,3 +17,6 @@ const fetchMovies = async (endpoint, params = {}) => {
 export const fetchTrendingMovies = () => fetchMovies("/trending/movie/day");
 
 export const fetchMovieDetails = (movieId) => fetchMovies(`/movie/${movieId}`);
+
+export const fetchMovieCast = (movieId) =>
+  fetchMovies(`/movie/${movieId}/credits`);
