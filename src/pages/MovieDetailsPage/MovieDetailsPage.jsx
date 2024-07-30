@@ -19,11 +19,11 @@ const MovieDetailsPage = () => {
   const location = useLocation();
   const goBackRef = useRef(location?.state || "/movies");
 
-  useEffect(() => {
-    setTimeout(() => {
-      navigate("/");
-    }, 6000);
-  }, [navigate]);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     navigate("/");
+  //   }, 6000);
+  // }, [navigate]);
 
   useEffect(() => {
     fetchMovieDetails(params.movieId).then((data) => setMovies(data));
